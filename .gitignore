@@ -1,2 +1,4 @@
 /week 7 data
 req_extractor.py
+.env
+scraping_session.session
