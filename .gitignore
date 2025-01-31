@@ -1,9 +1,10 @@
 /week 7 data
 req_extractor.py
 .env
+dbt_env
 # Ignore all .pyc files (compiled Python files)
 *.pyc
-
+/my_project
 # Ignore Python cache directories
 __pycache__/
 
