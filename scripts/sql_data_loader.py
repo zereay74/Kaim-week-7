@@ -93,20 +93,29 @@ class DatabaseManager:
         except Exception as e:
             self.logger.error(f"Error creating SQLAlchemy engine: {e}")
             return None
-
     def save_dataframe_to_db(self, df, table_name, if_exists='replace'):
         """
-        Save a DataFrame to a PostgreSQL table using SQLAlchemy.
+        Save a DataFrame to a PostgreSQL table in a schema with the same name 
+        as the table, using SQLAlchemy.
         """
         engine = self._get_sqlalchemy_engine()
         if engine is None:
             return
 
+        schema_name = table_name  # Schema name is the same as the table name
+
         try:
-            df.to_sql(table_name, engine, if_exists=if_exists, index=False)
-            self.logger.info(f"Successfully saved DataFrame to table {table_name}.")
+            # Create the schema if it doesn't exist (important!)
+            with engine.connect() as conn: # Use the existing engine to connect
+                conn.execute(f"CREATE SCHEMA IF NOT EXISTS {schema_name};")
+                conn.commit()
+
+            df.to_sql(table_name, engine, schema=schema_name, if_exists=if_exists, index=False)
+            self.logger.info(f"Successfully saved DataFrame to table {table_name} in schema {schema_name}.")
         except Exception as e:
             self.logger.error(f"Error saving DataFrame to database: {e}")
+
+
 
 # Usage Example:
 '''
