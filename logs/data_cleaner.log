@@ -3119,3 +3119,34 @@
 2025-02-01 14:27:40,419 - INFO - Column names standardized successfully.
 2025-02-01 14:27:43,704 - INFO - Checking for missing values in the DataFrame.
 2025-02-01 14:27:43,712 - INFO - Missing values check completed.
+2025-02-03 13:31:35,154 - ERROR - Error: File not found at week 7 data\scrapped TG data\detection_updated_data_1.csv
+2025-02-03 13:31:46,616 - INFO - Data successfully loaded from ../week 7 data\scrapped TG data\detection_updated_data_1.csv
+2025-02-03 13:31:46,616 - INFO - DataFrame Shape: (3635, 10)
+2025-02-03 13:32:05,025 - INFO - Data successfully loaded from ../week 7 data/scrapped TG data/detection_updated_data_1.csv
+2025-02-03 13:32:05,025 - INFO - DataFrame Shape: (3635, 10)
+2025-02-03 13:33:32,083 - INFO - Removing new lines from column: media_path.
+2025-02-03 13:33:32,092 - INFO - New lines removed from column: media_path.
+2025-02-03 13:33:48,587 - INFO - Transforming datetime column 'Date' to timezone 'None'.
+2025-02-03 13:33:48,589 - ERROR - Column 'Date' does not exist in the DataFrame.
+2025-02-03 13:34:10,213 - INFO - Transforming datetime column 'date' to timezone 'None'.
+2025-02-03 13:34:10,239 - INFO - Datetime transformation for column 'date' completed.
+2025-02-03 13:34:21,660 - INFO - Converting column 'ID' to integer.
+2025-02-03 13:34:21,661 - ERROR - Column 'ID' does not exist in the DataFrame.
+2025-02-03 13:34:26,856 - INFO - Converting column 'id' to integer.
+2025-02-03 13:34:26,858 - INFO - Column 'id' successfully converted to integer.
+2025-02-03 13:35:16,821 - INFO - Filling null values in columns: ['class_label', 'bbox', 'confidence'].
+2025-02-03 13:35:16,825 - INFO - Found 769 NaN and 769 'nan' strings in 'class_label', replacing them.
+2025-02-03 13:35:16,828 - INFO - Successfully replaced missing values in 'class_label'.
+2025-02-03 13:35:16,831 - INFO - Found 769 NaN and 769 'nan' strings in 'bbox', replacing them.
+2025-02-03 13:35:16,838 - INFO - Successfully replaced missing values in 'bbox'.
+2025-02-03 13:35:16,841 - INFO - Found 769 NaN and 769 'nan' strings in 'confidence', replacing them.
+2025-02-03 13:35:16,844 - INFO - Successfully replaced missing values in 'confidence'.
+2025-02-03 13:35:58,871 - INFO - Standardizing column names.
+2025-02-03 13:35:58,872 - INFO - Column names standardized successfully.
+2025-02-03 13:36:09,723 - INFO - Checking for missing values in the DataFrame.
+2025-02-03 13:36:09,728 - INFO - Missing values check completed.
+2025-02-03 13:37:30,996 - INFO - Successfully connected to the database.
+2025-02-03 13:37:31,029 - INFO - Database version: PostgreSQL 16.6, compiled by Visual C++ build 1942, 64-bit
+2025-02-03 13:37:31,031 - INFO - Database connection check successful.
+2025-02-03 13:37:56,212 - INFO - Successfully created SQLAlchemy engine.
+2025-02-03 13:37:57,045 - INFO - Successfully saved DataFrame to table processed_detection_result_table.
