@@ -1,1 +1,10 @@
-
+fastapi
+matplotlib
+numpy
+pandas
+psycopg2
+scipy
+seaborn
+sqlalchemy
+telethon
+uvicorn
